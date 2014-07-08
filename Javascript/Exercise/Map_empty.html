@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>event</title>
+<style type="text/css">
+.mark {
+position: absolute;
+}
+
+.btn{	
+	display : inline-block;
+	margin : 5px 30px;
+	width:48px;
+	
+}
+
+.btn:hover{
+	background-color: #E0E0E0;
+}
+
+.btn:active{
+	background-color: #E0E0E0;
+}
+
+#mark_select{
+	text-align:center;
+	width:400px;
+	height :60px;
+	border-style:solid;
+	border-width : 3px;
+	border-color : gray;
+}
+</style>
+<script type="text/javascript">
+
+var flag;
+
+window.onload=function(){
+	document.getElementById("ncnu").onclick=putmark;
+	selectmark('R');
+}
+
+function selectmark(a){
+	if (a=='R')
+		flag="RFlag.png";
+	if (a=='G')
+		flag="GFlag.png";
+	if (a=='B')
+		flag="BFlag.png";
+
+}
+
+function putmark(e){
+	var img = new  Image();
+	img.src=flag;
+	img.className="mark";
+	img.style.left=(e.clientX-16)+"px";
+	img.style.top=(e.clientY-32)+"px";
+	document.getElementById("map").appendChild(img);
+} 
+</script> 
+</head>
+<body>
+<div id="mark_select">
+	<Image class="btn" onclick="selectmark('R')" src="RFlag.png" alt="Red Flag"/>
+	<Image class="btn" onclick="selectmark('G')" src="GFlag.png" alt="Green Flag"/>
+	<Image  class="btn" onclick="selectmark('B')" src="BFlag.png" alt="Blue Flag"/>
+<div id="map">
+<img id="ncnu" src="ncnu.png" alt="ncnu" /></div>
+</body>
+</html>
