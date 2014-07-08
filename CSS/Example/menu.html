@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>MENU</title>
+<!-- <link href="mycss.css" rel="stylesheet" type="text/css" /> -->
+<style type="text/css">
+body{
+	margin : 20px auto;
+	width : 900px;
+	background-color: gray;
+	font-family: 微軟正黑體;
+}
+
+#menu{
+	list-style-type: none;
+	
+}
+
+#menu > li{	
+	display:inline-block;
+	position : relative;
+	
+}
+
+#menu > li > a{
+	display: block;	
+	text-align : center;
+	text-decoration:none;
+	background-color: #FF9900;
+	color:white;
+	border: 2px solid white;
+	width: 120px;
+	height: 25px;
+	padding-top: 5px;		
+}
+
+#menu > li > a:hover{
+	display: block;	
+	text-align : center;
+	text-decoration:none;
+	background-color: #FF3300;
+	color: white;
+	border: 2px solid white;
+	width: 120px;
+	height: 25px;
+	padding-top: 5px;		
+}
+
+#menu > li:hover > ul{
+	visibility: visible;
+}
+
+
+#menu > li > ul{
+	visibility: hidden;
+	list-style-type: none;
+	position:absolute;
+	left: -40px;
+}
+
+#menu > li > ul > li{
+	display: block;
+	
+}
+
+#menu > li > ul > li > a{	
+	display: block;
+	text-align : center;
+	text-decoration:none;
+	padding-top: 5px;		
+	background-color: #99FF00;
+	color:white;
+	border: 2px solid white;
+	width: 150px;
+	height: 25px;
+}
+
+#menu > li > ul > li > a:hover{	
+	display: block;
+	text-align : center;
+	text-decoration:none;
+	padding-top: 5px;		
+	background-color: #669900;
+	color:white;
+	font-weight:bold;
+	border: 2px solid white;
+	width: 150px;
+	height: 25px;
+}
+</style>
+</head>
+<body>
+	<ul id="menu">
+		<li><a href="">義大利麵</a>
+			<ul>
+				<li><a href="">番茄肉醬義大利麵</a></li>
+				<li><a href="">青醬蛤蠣義大利麵</a></li>
+				<li><a href="">奶油蘑菇義大利麵</a></li>
+			</ul>
+		</li>
+		<li><a href="">排餐</a>
+			<ul >
+				<li><a href="">大丁骨牛排</a></li>
+				<li><a href="">32盎司巨無霸牛排</a></li>
+				<li><a href="">菲力牛排</a></li>
+			</ul>
+		</li>
+		<li><a href="">焗烤</a>
+			<ul >
+				<li><a href="">奶油燻雞焗烤飯</a></li>
+				<li><a href="">香菇海鮮焗烤麵</a></li>
+				<li><a href="">鄉村鮮蔬焗烤飯</a></li>
+			</ul>
+		</li>
+	</ul>
+	
+</body>
+</html>
